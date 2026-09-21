@@ -23,3 +23,6 @@ pnpm-debug.log*
 
 # TypeScript
 *.tsbuildinfo
+
+# Local project planning
+ALPHAJE-Odyssey-Project-Plan.md
