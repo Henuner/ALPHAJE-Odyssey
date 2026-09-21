@@ -1,0 +1,48 @@
+---
+title: Attention as a Learning Compass
+date: 2026-07-26
+category: AI
+tags:
+  - Deep Learning
+  - Transformer
+  - Notes
+type: technical
+summary: A first technical note about how attention helps a model decide where to look.
+cover: /images/covers/attention.jpg
+---
+
+## Why attention matters
+
+Attention is a way for a model to compare one token with the surrounding context and decide which
+parts deserve more weight.
+
+<Callout>
+The goal of this note is not to memorize formulas, but to build an intuition that can survive
+implementation details.
+</Callout>
+
+## A tiny formula
+
+Scaled dot-product attention can be written as:
+
+$$
+\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+$$
+
+## Implementation sketch
+
+```ts
+type AttentionInput = {
+  query: number[][];
+  key: number[][];
+  value: number[][];
+};
+
+export function describeAttention(input: AttentionInput) {
+  return `Compare ${input.query.length} queries with ${input.key.length} keys.`;
+}
+```
+
+## Next questions
+
+The next trail should compare self-attention, cross-attention, and multi-head attention.

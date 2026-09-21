@@ -1,0 +1,76 @@
+@import "katex/dist/katex.min.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", "Noto Sans SC", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(255, 248, 236, 0.96), rgba(231, 240, 236, 0.86)),
+    #fff8ec;
+  color: #24332d;
+}
+
+::selection {
+  background: rgba(244, 184, 96, 0.48);
+}
+
+.prose :where(pre) {
+  border-radius: 8px;
+  border: 1px solid rgba(36, 51, 45, 0.12);
+}
+
+.prose :where(h2, h3) {
+  scroll-margin-top: 6rem;
+}
+
+@keyframes cloud-drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(24px, 3px, 0); }
+}
+
+@keyframes avatar-breathe {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes cape-sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+@keyframes crown-glint {
+  0%, 82%, 100% { transform: translateY(0); }
+  88% { transform: translateY(-2px); }
+  93% { transform: translateY(0); }
+}
+
+.cloud-drift { animation: cloud-drift 13s ease-in-out infinite; }
+.cloud-drift-slow { animation: cloud-drift 18s ease-in-out infinite reverse; }
+.avatar-breathe { animation: avatar-breathe 4.5s ease-in-out infinite; }
+.avatar-cape { animation: cape-sway 3.8s ease-in-out infinite; transform-origin: 100px 145px; }
+.avatar-crown { animation: crown-glint 7s ease-in-out infinite; transform-origin: 100px 38px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
