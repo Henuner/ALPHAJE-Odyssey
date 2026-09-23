@@ -1,5 +1,6 @@
 import { HeroScene } from "@/components/home/hero-scene";
 import { LatestTrail } from "@/components/home/latest-trail";
+import { OdysseyPlayground } from "@/components/home/odyssey-playground";
 import { WorldEntrances } from "@/components/home/world-entrances";
 import { getAllContent } from "@/lib/content";
 
@@ -17,6 +18,7 @@ export default function HomePage() {
     <main>
       <HeroScene />
       <WorldEntrances counts={counts} />
+      <OdysseyPlayground />
       <LatestTrail items={latest} />
     </main>
   );
