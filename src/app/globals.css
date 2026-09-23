@@ -18,10 +18,8 @@ html {
 
 body {
   min-height: 100vh;
-  background:
-    linear-gradient(180deg, rgba(255, 248, 236, 0.96), rgba(231, 240, 236, 0.86)),
-    #fff8ec;
-  color: #24332d;
+  background: #fffaf2;
+  color: #2f3b35;
 }
 
 ::selection {
@@ -47,6 +45,38 @@ body {
   50% { transform: translateY(-5px); }
 }
 
+@keyframes pet-idle-walk {
+  0%, 70%, 100% { transform: translateX(0) rotate(0deg); }
+  78% { transform: translateX(-4px) rotate(-1deg); }
+  86% { transform: translateX(3px) rotate(1deg); }
+  94% { transform: translateX(0) rotate(0deg); }
+}
+
+@keyframes pet-blink {
+  0%, 44%, 48%, 100% { opacity: 0; }
+  45%, 47% { opacity: 1; }
+}
+
+@keyframes hero-cloud-drift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(14px); }
+}
+
+@keyframes hero-flag-wave {
+  0%, 100% { transform: skewY(0deg) scaleX(1); }
+  50% { transform: skewY(-5deg) scaleX(0.88); }
+}
+
+@keyframes hero-water-flow {
+  0%, 100% { opacity: 0.25; transform: translateY(-2px) scaleY(0.96); }
+  50% { opacity: 0.55; transform: translateY(3px) scaleY(1.04); }
+}
+
+@keyframes hero-light-glow {
+  0%, 100% { opacity: 0.5; transform: scale(0.92); }
+  50% { opacity: 0.95; transform: scale(1.08); }
+}
+
 @keyframes cape-sway {
   0%, 100% { transform: rotate(0deg); }
   50% { transform: rotate(1.5deg); }
@@ -61,6 +91,12 @@ body {
 .cloud-drift { animation: cloud-drift 13s ease-in-out infinite; }
 .cloud-drift-slow { animation: cloud-drift 18s ease-in-out infinite reverse; }
 .avatar-breathe { animation: avatar-breathe 4.5s ease-in-out infinite; }
+.pet-idle-walk { animation: pet-idle-walk 8s ease-in-out infinite; }
+.pet-blink-frame { animation: pet-blink 5.5s steps(1, end) infinite; opacity: 0; }
+.hero-cloud-layer { animation: hero-cloud-drift 18s ease-in-out infinite; }
+.hero-flag { animation: hero-flag-wave 2.8s ease-in-out infinite; transform-origin: left center; }
+.hero-waterfall { animation: hero-water-flow 2.4s ease-in-out infinite; transform-origin: top center; }
+.hero-window-light { animation: hero-light-glow 3.2s ease-in-out infinite; }
 .avatar-cape { animation: cape-sway 3.8s ease-in-out infinite; transform-origin: 100px 145px; }
 .avatar-crown { animation: crown-glint 7s ease-in-out infinite; transform-origin: 100px 38px; }
 

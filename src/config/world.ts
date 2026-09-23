@@ -10,11 +10,11 @@ export const worldRegions: Record<ContentArea, WorldRegion> = {
     href: "/knowledge",
     sceneKind: "observatory",
     theme: {
-      accent: "#77a8b8",
-      surface: "#dcecf0",
-      marker: "#477988",
+      accent: "#89b5c0",
+      surface: "#e5f1f2",
+      marker: "#527983",
     },
-    position: { desktop: { x: 24, y: 31 }, mobileOrder: 1 },
+    position: { desktop: { x: 25, y: 23 }, heroDesktop: { x: 62, y: 20 }, mobileOrder: 1 },
     guideMessage: "Look closely. Every difficult idea becomes a little clearer from here.",
   },
   projects: {
@@ -25,11 +25,11 @@ export const worldRegions: Record<ContentArea, WorldRegion> = {
     href: "/projects",
     sceneKind: "workshop",
     theme: {
-      accent: "#d89b45",
-      surface: "#fae6bd",
-      marker: "#9a6827",
+      accent: "#d7a45d",
+      surface: "#faebcf",
+      marker: "#8b672f",
     },
-    position: { desktop: { x: 73, y: 34 }, mobileOrder: 2 },
+    position: { desktop: { x: 76, y: 23 }, heroDesktop: { x: 61, y: 59 }, mobileOrder: 2 },
     guideMessage: "Ideas earn their shape in the workshop. Bring curiosity and leave with a build.",
   },
   reflection: {
@@ -40,11 +40,11 @@ export const worldRegions: Record<ContentArea, WorldRegion> = {
     href: "/reflection",
     sceneKind: "library",
     theme: {
-      accent: "#d67d6b",
-      surface: "#f8d9d1",
-      marker: "#9f4f40",
+      accent: "#d98e7d",
+      surface: "#f7e1da",
+      marker: "#925d52",
     },
-    position: { desktop: { x: 32, y: 71 }, mobileOrder: 3 },
+    position: { desktop: { x: 24, y: 69 }, heroDesktop: { x: 85, y: 37 }, mobileOrder: 3 },
     guideMessage: "Some paths only make sense after we sit down and write about them.",
   },
   creative: {
@@ -55,11 +55,11 @@ export const worldRegions: Record<ContentArea, WorldRegion> = {
     href: "/creative",
     sceneKind: "atelier",
     theme: {
-      accent: "#729d72",
-      surface: "#dcebd8",
-      marker: "#476e4a",
+      accent: "#89a985",
+      surface: "#e3eee0",
+      marker: "#557555",
     },
-    position: { desktop: { x: 69, y: 73 }, mobileOrder: 4 },
+    position: { desktop: { x: 77, y: 69 }, heroDesktop: { x: 92, y: 72 }, mobileOrder: 4 },
     guideMessage: "Not every experiment needs a reason. Some begin simply because making is fun.",
   },
 };

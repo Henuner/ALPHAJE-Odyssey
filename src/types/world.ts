@@ -2,8 +2,6 @@ import type { ContentArea } from "@/types/content";
 
 export type SceneKind = "observatory" | "workshop" | "library" | "atelier";
 
-export type AvatarMood = "welcome" | "curious" | "proud" | "thinking";
-
 export type AvatarSize = "small" | "medium" | "large";
 
 export type WorldRegion = {
@@ -20,14 +18,15 @@ export type WorldRegion = {
   };
   position: {
     desktop: { x: number; y: number };
+    heroDesktop: { x: number; y: number };
     mobileOrder: number;
   };
   guideMessage: string;
 };
 
 export type AlphaJeAvatarProps = {
-  mood?: AvatarMood;
   size?: AvatarSize;
   animated?: boolean;
   className?: string;
+  priority?: boolean;
 };

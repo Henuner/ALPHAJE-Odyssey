@@ -12,11 +12,11 @@ const regionIcons = {
 
 export function RegionDirectory({ counts }: { counts: Record<ContentArea, number> }) {
   return (
-    <div className="grid gap-px overflow-hidden rounded-lg border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
       {worldRegionList.map((region) => {
         const Icon = regionIcons[region.id];
         return (
-          <Link key={region.id} href={region.href} className="group bg-white/86 p-5 outline-none transition hover:bg-white focus-visible:bg-white focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ink">
+          <Link key={region.id} href={region.href} className="group rounded-lg border border-ink/[0.08] bg-white/75 p-5 shadow-card outline-none transition duration-300 hover:-translate-y-1 hover:bg-white/90 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-ink">
             <div className="flex items-start justify-between gap-4">
               <span className="grid size-10 place-items-center rounded-lg" style={{ backgroundColor: region.theme.surface, color: region.theme.marker }}>
                 <Icon className="size-5" aria-hidden="true" />
