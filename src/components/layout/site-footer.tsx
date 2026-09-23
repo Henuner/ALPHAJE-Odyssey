@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-ink/10 bg-white/45">
+    <footer className="border-t border-ink/[0.08] bg-mist/45">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.2fr_1fr]">
         <div>
           <p className="font-semibold text-ink">{siteConfig.name}</p>

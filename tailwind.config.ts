@@ -9,17 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        parchment: "#fff8ec",
-        meadow: "#6f9f72",
-        moss: "#4f6f52",
-        honey: "#f4b860",
-        coral: "#ec7f66",
-        ink: "#24332d",
-        mist: "#e7f0ec",
-        skysoft: "#b9dce5",
+        parchment: "#fffaf2",
+        meadow: "#789976",
+        moss: "#48614f",
+        honey: "#e8b65f",
+        coral: "#df826f",
+        ink: "#2f3b35",
+        mist: "#eaf2ed",
+        skysoft: "#cbe5eb",
       },
       boxShadow: {
-        soft: "0 18px 60px rgba(73, 92, 74, 0.13)",
+        card: "0 8px 24px rgba(66, 82, 70, 0.07)",
+        soft: "0 16px 42px rgba(66, 82, 70, 0.11)",
+        float: "0 12px 28px rgba(66, 82, 70, 0.16)",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],

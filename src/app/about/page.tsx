@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { Code2, Mail, Map, Sparkles } from "lucide-react";
-import { AvatarGuide } from "@/components/avatar/avatar-guide";
+import { Backpack, Code2, Compass, Crown, Mail, Map, Sparkles } from "lucide-react";
 import { PageShell } from "@/components/layout/page-shell";
 import { SectionHeader } from "@/components/layout/section-header";
 import { siteConfig } from "@/config/site";
@@ -18,10 +17,10 @@ export default function AboutPage() {
       />
       <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_0.85fr]">
         <section className="border-y border-ink/10 py-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-coral">The king behind the world</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-coral">The queen behind the world</p>
           <h2 className="mt-3 text-2xl font-semibold text-ink">A digital self, not a separate mascot</h2>
           <p className="mt-4 leading-7 text-ink/68">
-            The little explorer king is ALPHAJE&apos;s digital counterpart: the keeper of this world and a learner still walking through it. The crown represents authorship; the backpack keeps the story open.
+            The explorer queen is ALPHAJE&apos;s digital counterpart: the keeper of this world and a learner still walking through it. Her crown represents authorship; her backpack keeps the story open.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
             {directions.map((direction) => (
@@ -31,8 +30,13 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
-        <aside className="flex items-end justify-center border-y border-ink/10 py-6">
-          <AvatarGuide message="I keep the map, but the real journey belongs to the person learning behind the screen." mood="proud" size="medium" compact />
+        <aside className="border-y border-ink/10 py-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-moss">Character language</p>
+          <div className="mt-5 space-y-5">
+            <div className="flex gap-4"><Crown className="mt-0.5 size-5 shrink-0 text-honey" aria-hidden="true" /><div><p className="font-semibold text-ink">Crown</p><p className="mt-1 text-sm leading-6 text-ink/62">Authorship and ownership of this growing world.</p></div></div>
+            <div className="flex gap-4"><Backpack className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" /><div><p className="font-semibold text-ink">Backpack</p><p className="mt-1 text-sm leading-6 text-ink/62">The journey stays open, practical, and unfinished.</p></div></div>
+            <div className="flex gap-4"><Compass className="mt-0.5 size-5 shrink-0 text-moss" aria-hidden="true" /><div><p className="font-semibold text-ink">Compass</p><p className="mt-1 text-sm leading-6 text-ink/62">Curiosity decides where the next path begins.</p></div></div>
+          </div>
         </aside>
       </div>
 

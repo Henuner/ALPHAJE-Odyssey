@@ -8,7 +8,7 @@ export function ContentCard({ item }: { item: ContentItem }) {
   const region = worldRegions[item.area];
 
   return (
-    <article className="group rounded-lg border border-ink/10 bg-white/70 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+    <article className="group rounded-lg border border-ink/[0.08] bg-white/75 p-5 shadow-card transition duration-300 hover:-translate-y-1 hover:border-ink/15 hover:bg-white/90 hover:shadow-soft">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <ArticleMeta item={item} />
         <span className="rounded-full px-2.5 py-1 text-xs font-semibold" style={{ color: region.theme.marker, backgroundColor: region.theme.surface }}>{region.title}</span>

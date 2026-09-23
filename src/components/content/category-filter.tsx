@@ -29,7 +29,7 @@ export function CategoryFilter({ items }: { items: ContentItem[] }) {
               type="button"
               aria-pressed={isActive}
               onClick={() => setActiveCategory(category)}
-              className={isActive ? "rounded-full bg-ink px-3.5 py-2 text-sm font-medium text-white" : "rounded-full border border-ink/10 bg-white/65 px-3.5 py-2 text-sm font-medium text-ink/68 transition hover:border-ink/25 hover:text-ink"}
+              className={isActive ? "rounded-full bg-ink px-3.5 py-2 text-sm font-medium text-white shadow-card" : "rounded-full border border-ink/[0.08] bg-white/70 px-3.5 py-2 text-sm font-medium text-ink/68 transition hover:border-ink/20 hover:bg-white hover:text-ink"}
             >
               {category}
             </button>
